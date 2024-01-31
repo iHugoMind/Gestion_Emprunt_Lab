@@ -28,15 +28,15 @@ $base = mysqli_connect ($host, $user, $password,$bdd);
 <body>
     <div id="body">
         <?php
-            // Requete SQL
-             $requete = 'SELECT prenom FROM User WHERE nom = "Briolat"';
+             // Requete SQL
+            $requete = 'SELECT prenom FROM User WHERE nom = "Briolat"';
              // Lancement + Message d'erreur
-             $blase = $base->query($requete);
+            $blase = $base->query($requete);
              // Résultat dans tableau
-             $prenom = mysqli_fetch_array($blase);
-            // Libération mémoire
-            //  mysql_free_result ($req);
-            //  mysql_close ();
+            $prenom = mysqli_fetch_array($blase);
+             // Libération mémoire
+             //  mysql_free_result ($req);
+             //  mysql_close ();
         ?>
         <h1>Bienvenue, <?php echo $prenom['prenom']; ?></h1>
 
