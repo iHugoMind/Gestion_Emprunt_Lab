@@ -1,11 +1,11 @@
 <?php
 // Info Connection
     $host = 'mysql-projetbmh.alwaysdata.net';
-	$bdd = 'projetbmh_empruntressource_test';
+	$bdd = 'projetbmh_labnum';
 	$user = 'projetbmh';
 	$password = 'Projet45of45&*';
 // BDD Connect
-$base = mysqli_connect ($host, $user, $password,$bdd);
+$base = mysqli_connect ($host, $user, $password, $bdd);
     if (!$base) die("Erreur SQL !");
 ?>
 
@@ -29,7 +29,7 @@ $base = mysqli_connect ($host, $user, $password,$bdd);
     <div id="body">
         <?php
              // Requete SQL
-            $requete = 'SELECT prenom FROM User WHERE nom = "Briolat"';
+            $requete = 'SELECT prenomUtilisateur FROM Utilisateurs WHERE nomUtilisateur = "Mourot"';
              // Lancement + Message d'erreur
             $blase = $base->query($requete);
              // Résultat dans tableau
@@ -38,7 +38,7 @@ $base = mysqli_connect ($host, $user, $password,$bdd);
              //  mysql_free_result ($req);
              //  mysql_close ();
         ?>
-        <h1>Bienvenue, <?php echo $prenom['prenom']; ?></h1>
+        <h1>Bienvenue, <?php echo $prenom['prenomUtilisateur']; ?></h1>
 
         <div class="alertbox">
             <div id="alert">
