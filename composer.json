@@ -1,0 +1,18 @@
+{
+    "name": "maelb/projet-gestion-emprunt-r",
+    "authors": [
+        {
+            "name": "Mael",
+            "email": "mael.buisson2@gmail.com"
+        }
+    ],
+
+    "autoload" : {
+        "psr-4": {
+            "Router\\": "routes/",
+            "App\\": "app/"
+        }
+    },
+
+    "require": {}
+}
