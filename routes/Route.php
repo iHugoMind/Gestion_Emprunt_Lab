@@ -1,7 +1,7 @@
 <?php
 
 namespace Router;
-use App\Controllers\ConnexionController;
+use Database\DBconnection;
 
 class Route {
 
@@ -31,7 +31,7 @@ class Route {
     public function execute()
     {
         $params = explode('@', $this->action);
-        $controller = new $params[0]();
+        $controller = new $params[0](new DBconnection('projetbmh_labnum', 'mysql-projetbmh.alwaysdata.net', 'projetbmh', 'Projet45of45&*'));
         $method = $params[1];
 
         return isset($this->matches[1]) ? $controller->$method($this->matches[1]) : 
